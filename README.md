@@ -33,23 +33,22 @@ O projeto é estruturado como um monorrepo contendo uma API RESTful em .NET e um
 
 1. Navegue até a pasta da API:
    ```bash
-   cd FinanceManager.Api
-
-
+      cd FinanceManager.Api
+   ```
 
 2. Configure a string de conexão no `appsettings.json` para apontar para seu banco PostgreSQL local.
 3. Aplique as migrations para criar o banco:
-```bash
-dotnet ef database update
-
-```
+   ```bash
+   dotnet ef database update
+   
+   ```
 
 
 4. Execute a aplicação:
-```bash
-dotnet run
-
-```
+   ```bash
+   dotnet run
+   
+   ```
 
 
 *A API estará rodando em: `https://localhost:7061` (ou porta similar).*
@@ -57,24 +56,24 @@ dotnet run
 ### 2️⃣ Configurando o Frontend
 
 1. Navegue até a pasta do frontend:
-```bash
-cd frontend
-
-```
+   ```bash
+   cd frontend
+   
+   ```
 
 
 2. Instale as dependências:
-```bash
-npm install
-
-```
+   ```bash
+   npm install
+   
+   ```
 
 
 3. Execute o servidor de desenvolvimento:
-```bash
-npm run dev
-
-```
+   ```bash
+   npm run dev
+   
+   ```
 
 
 *O site estará disponível em: `http://localhost:5173`.*
@@ -102,3 +101,4 @@ npm run dev
 * [ ] Dashboard com Gráficos
 * [ ] CRUD de Transações (Receitas/Despesas)
 * [ ] Relatórios Mensais
+
