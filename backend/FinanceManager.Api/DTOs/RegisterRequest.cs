@@ -13,6 +13,6 @@ namespace FinanceManager.Api.DTOs
         public string Password { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "As senhas não coincidem")]
-        public string ComfirmPassword { get; set; } = string.Empty;
+        public string ConfirmPassword { get; set; } = string.Empty;
     }
 }

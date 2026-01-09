@@ -1,7 +1,8 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../../services/api"; 
 import { AuthContext } from "../../contexts/AuthContext";
+import {toast} from 'react-toastify';
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -28,7 +29,7 @@ export function Login() {
       
     } catch (error) {
       console.error("Erro no login:", error);
-      alert("Falha no login! Verifique seu email e senha.");
+      toast.warning("Falha no login! Verifique seu email e senha.");
     } finally {
       setLoading(false);
     }
@@ -84,7 +85,7 @@ export function Login() {
         </form>
 
         <div className="mt-4 text-center text-sm text-gray-500">
-          <p>Ainda não tem conta? <span className="cursor-pointer text-blue-600 hover:underline">Cadastre-se</span></p>
+          <p>Ainda não tem conta? <Link to="/Register" className="cursor-pointer text-blue-600 hover:underline">Cadastre-se</Link></p>
         </div>
       </div>
     </div>
