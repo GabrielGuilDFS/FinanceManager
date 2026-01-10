@@ -89,16 +89,14 @@ O projeto é estruturado como um monorrepo contendo uma API RESTful em .NET e um
 * [x] Endpoints base de Autenticação (Swagger funcional)
 * [x] Setup do Frontend com Vite + TypeScript
 * [x] Configuração do Tailwind CSS
-
-### 🚧 Em Desenvolvimento
-
-* [ ] Tela de Login e Integração com API
-* [ ] Contexto de Autenticação (Frontend)
-* [ ] Proteção de Rotas
+* [x] Tela de Login e Integração com API
+* [x] Contexto de Autenticação (Frontend)
+* [x] Proteção de Rotas
 
 ### 📅 Futuro
 
 * [ ] Dashboard com Gráficos
 * [ ] CRUD de Transações (Receitas/Despesas)
 * [ ] Relatórios Mensais
+
 
