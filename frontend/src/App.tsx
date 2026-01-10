@@ -2,8 +2,10 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import { Login } from "./pages/Login";
 import {Register} from "./pages/Register";
+import { Dashboard } from "./pages/Dashboard";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { PrivateRoute } from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -12,9 +14,15 @@ function App() {
       <ToastContainer autoClose={3000} />
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/dashboard" element={<h1>Bem-vindo ao Sistema! (Futuro Dashboard)</h1>} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/Register" element={<Register />} />
+          <Route 
+            path="/dashboard" 
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            } 
+          />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
